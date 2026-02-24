@@ -122,3 +122,14 @@
     @apply bg-background text-foreground;
     }
 }
+
+#root{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  width:100dvw;
+}
+
+#root > *{
+  width:100%;
+}
