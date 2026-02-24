@@ -38,7 +38,7 @@ function MovieDetails({ movie, onBack }: { movie: Movie; onBack: () => void }) {
                             Showtime
                         </p>
                         <p className="text-base">
-                            {calculateTime(movie.showtime)}
+                            {calculateTime(movie.showtime)} at {movie.showtime}
                         </p>
                     </div>
 
