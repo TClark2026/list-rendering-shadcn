@@ -1,3 +1,4 @@
+import { Button } from "./button";
 import {
     Card,
     CardHeader,
@@ -13,6 +14,7 @@ interface MovieProps {
     genre: string;
     showtime: string;
     poster: string;
+    onClick: () => void;
 }
 
 const movieCard = ({
@@ -21,6 +23,7 @@ const movieCard = ({
     genre,
     showtime,
     poster,
+    onClick,
 }: MovieProps) => {
     return (
         <Card className="w-full min-w-0 overflow-hidden flex flex-col">
@@ -41,7 +44,11 @@ const movieCard = ({
 
                 <p className="text-sm line-clamp-3">{description}</p>
             </CardContent>
-
+            <div className="flex justify-center">
+                <Button className="w-fit cursor-pointer" onClick={onClick}>
+                    View
+                </Button>
+            </div>
             <CardFooter className="flex-none">
                 <p className="line-clamp-1">{showtime}</p>
             </CardFooter>
